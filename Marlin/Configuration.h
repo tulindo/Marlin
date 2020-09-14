@@ -488,10 +488,10 @@
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
-  // FIND YOUR OWN: "M303 E0 C8 S190" to run autotune at 190 degreesC for 8 cycles.
-  #define DEFAULT_Kp 27.40
-  #define DEFAULT_Ki 2.79
-  #define DEFAULT_Kd 67.33
+  // FIND YOUR OWN: "M303 U1 E0 C15 S195" to run autotune at 195 degreesC for 15 cycles.
+  #define DEFAULT_Kp 29.04
+  #define DEFAULT_Ki 3.02
+  #define DEFAULT_Kd 70.18
 #endif // PIDTEMP
 
 //===========================================================================
@@ -529,10 +529,10 @@
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
-  #define DEFAULT_bedKp 42.96
-  #define DEFAULT_bedKi 8.32
-  #define DEFAULT_bedKd 147.80
+  // FIND YOUR OWN: "M303 U1 E-1 C15 S40" to run autotune on the bed at 40 degreesC for 15 cycles.
+  #define DEFAULT_bedKp 19.48
+  #define DEFAULT_bedKi 1.59
+  #define DEFAULT_bedKd 159.59
 
 #endif // PIDTEMPBED
 
@@ -729,7 +729,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 98.80 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 79.89, 79.95, 399.20, 98.80 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1261,9 +1261,9 @@
   #if ENABLED(G26_MESH_VALIDATION)
     #define MESH_TEST_NOZZLE_SIZE    0.4  // (mm) Diameter of primary nozzle.
     #define MESH_TEST_LAYER_HEIGHT   0.2  // (mm) Default layer height for the G26 Mesh Validation Tool.
-    #define MESH_TEST_HOTEND_TEMP  190    // (°C) Default nozzle temperature for the G26 Mesh Validation Tool.
-    #define MESH_TEST_BED_TEMP      40    // (°C) Default bed temperature for the G26 Mesh Validation Tool.
-    #define G26_XY_FEEDRATE         20    // (mm/s) Feedrate for XY Moves for the G26 Mesh Validation Tool.
+    #define MESH_TEST_HOTEND_TEMP    195  // (°C) Default nozzle temperature for the G26 Mesh Validation Tool.
+    #define MESH_TEST_BED_TEMP        40  // (°C) Default bed temperature for the G26 Mesh Validation Tool.
+    #define G26_XY_FEEDRATE           20  // (mm/s) Feedrate for XY Moves for the G26 Mesh Validation Tool.
     #define G26_RETRACT_MULTIPLIER   1.0  // G26 Q (retraction) used by default between mesh test elements.
   #endif
 
