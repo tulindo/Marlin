@@ -288,7 +288,6 @@
    */
   #define WATCH_CHAMBER_TEMP_PERIOD            20 // Seconds
   #define WATCH_CHAMBER_TEMP_INCREASE           4 // Degrees Celsius
-<<<<<<< HEAD
 #endif
 
 /**
@@ -303,8 +302,6 @@
    */
   #define WATCH_COOLER_TEMP_PERIOD            60 // Seconds
   #define WATCH_COOLER_TEMP_INCREASE           3 // Degrees Celsius
-=======
->>>>>>> 453db44fc61e50912d2d77ab90c00694f011be63
 #endif
 
 #if ENABLED(PIDTEMP)
@@ -581,15 +578,9 @@
 #if ENABLED(CASE_LIGHT_ENABLE)
   //#define CASE_LIGHT_PIN 6                  // Override the default pin if needed
   #define INVERT_CASE_LIGHT false             // Set true if Case Light is ON when pin is LOW
-<<<<<<< HEAD
   #define CASE_LIGHT_DEFAULT_ON true          // Set default power-up state on
   #define CASE_LIGHT_DEFAULT_BRIGHTNESS 105   // Set default power-up brightness (0-255, requires PWM pin)
-=======
-  #define CASE_LIGHT_DEFAULT_ON false          // Set default power-up state on
-  #define CASE_LIGHT_DEFAULT_BRIGHTNESS 255   // Set default power-up brightness (0-255, requires PWM pin)
-  //#define CASE_LIGHT_MAX_PWM 128            // Limit pwm
   #define CASE_LIGHT_MENU                   // Add Case Light options to the LCD menu
->>>>>>> 453db44fc61e50912d2d77ab90c00694f011be63
   //#define CASE_LIGHT_NO_BRIGHTNESS          // Disable brightness control. Enable for non-PWM lighting.
   //#define CASE_LIGHT_MAX_PWM 128            // Limit PWM duty cycle (0-255)
   //#define CASE_LIGHT_MENU                   // Add Case Light options to the LCD menu
@@ -1193,12 +1184,9 @@
 
   // BACK menu items keep the highlight at the top
   #define TURBO_BACK_MENU_ITEM
-<<<<<<< HEAD
 
   // Add a mute option to the LCD menu
   //#define SOUND_MENU_ITEM
-=======
->>>>>>> 453db44fc61e50912d2d77ab90c00694f011be63
 
   /**
    * LED Control Menu
@@ -1231,14 +1219,9 @@
 
 #endif // HAS_LCD_MENU
 
-<<<<<<< HEAD
 #if HAS_DISPLAY
   // The timeout (in ms) to return to the status screen from sub-menus
   //#define LCD_TIMEOUT_TO_STATUS 15000
-=======
-// Scroll a longer status message into view
-#define STATUS_MESSAGE_SCROLLING
->>>>>>> 453db44fc61e50912d2d77ab90c00694f011be63
 
   #if ENABLED(SHOW_BOOTSCREEN)
     #define BOOTSCREEN_TIMEOUT 4000      // (ms) Total Duration to display the boot screen(s)
@@ -1247,7 +1230,6 @@
     #endif
   #endif
 
-<<<<<<< HEAD
   // Scroll a longer status message into view
   //#define STATUS_MESSAGE_SCROLLING
 
@@ -1256,7 +1238,6 @@
 
   // Add an 'M73' G-code to set the current percentage
   //#define LCD_SET_PROGRESS_MANUALLY
-=======
 // The timeout (in ms) to return to the status screen from sub-menus
 #define LCD_TIMEOUT_TO_STATUS 60000
 
@@ -1265,7 +1246,6 @@
 
 // Show the E position (filament used) during printing
 #define LCD_SHOW_E_TOTAL
->>>>>>> 453db44fc61e50912d2d77ab90c00694f011be63
 
   // Show the E position (filament used) during printing
   //#define LCD_SHOW_E_TOTAL
@@ -1329,13 +1309,9 @@
   //#define NO_SD_AUTOSTART                 // Remove auto#.g file support completely to save some Flash, SRAM
   //#define MENU_ADDAUTOSTART               // Add a menu option to run auto#.g files
 
-<<<<<<< HEAD
   //#define BROWSE_MEDIA_ON_INSERT          // Open the file browser when media is inserted
 
   #define EVENT_GCODE_SD_ABORT "G28XY"      // G-code to run on SD Abort Print (e.g., "G28XY" or "G27")
-=======
-  #define EVENT_GCODE_SD_ABORT "G27XY"      // G-code to run on SD Abort Print (e.g., "G28XY" or "G27")
->>>>>>> 453db44fc61e50912d2d77ab90c00694f011be63
 
   #if ENABLED(PRINTER_EVENT_LEDS)
     #define PE_LEDS_COMPLETED_TIME  (30*60) // (seconds) Time to keep the LED "done" color before restoring normal illumination
@@ -2176,7 +2152,6 @@
  * NOTE: Not yet implemented for all platforms.
  */
 #define EMERGENCY_PARSER
-<<<<<<< HEAD
 
 /**
  * Realtime Reporting (requires EMERGENCY_PARSER)
@@ -2197,8 +2172,6 @@
 #if ENABLED(REALTIME_REPORTING_COMMANDS)
   //#define FULL_REPORT_TO_HOST_FEATURE   // Auto-report the machine status like Grbl CNC
 #endif
-=======
->>>>>>> 453db44fc61e50912d2d77ab90c00694f011be63
 
 // Bad Serial-connectVOLNO_TIMEOUTS 1000 // Milliseconds
 
@@ -2752,8 +2725,7 @@
    * Define your own with:
    * { <off_time[1..15]>, <hysteresis_end[-3..12]>, hysteresis_start[1..8] }
    */
-<<<<<<< HEAD
-  #define CHOPPER_TIMING CHOPPER_DEFAULT_12V        // All axes (override below)
+  //#define CHOPPER_TIMING CHOPPER_DEFAULT_12V        // All axes (override below)
   //#define CHOPPER_TIMING_X  CHOPPER_TIMING        // For X Axes (override below)
   //#define CHOPPER_TIMING_X2 CHOPPER_TIMING_X
   //#define CHOPPER_TIMING_Y  CHOPPER_TIMING        // For Y Axes (override below)
@@ -2770,9 +2742,7 @@
   //#define CHOPPER_TIMING_E5 CHOPPER_TIMING_E
   //#define CHOPPER_TIMING_E6 CHOPPER_TIMING_E
   //#define CHOPPER_TIMING_E7 CHOPPER_TIMING_E
-=======
   #define CHOPPER_TIMING CHOPPER_DEFAULT_24V
->>>>>>> 453db44fc61e50912d2d77ab90c00694f011be63
 
   /**
    * Monitor Trinamic drivers
