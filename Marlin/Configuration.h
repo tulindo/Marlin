@@ -800,7 +800,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 79.89, 79.95, 399.20, 98.80 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.54, 80.40, 399.20, 98.80 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1226,13 +1226,17 @@
 
 // @section machine
 
+<<<<<<< HEAD
 // The size of the printable area
+=======
+// The size of the print bed
+>>>>>>> 1bed0032e9 (Mesh Bed leveling)
 #define X_BED_SIZE 220
 #define Y_BED_SIZE 220
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS -11
-#define Y_MIN_POS -4
+#define Y_MIN_POS -8
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
@@ -1384,13 +1388,14 @@
 //#define AUTO_BED_LEVELING_LINEAR
 //#define AUTO_BED_LEVELING_BILINEAR
 //#define AUTO_BED_LEVELING_UBL
-//#define MESH_BED_LEVELING
+#define MESH_BED_LEVELING
 
 /**
  * Normally G28 leaves leveling disabled on completion. Enable one of
  * these options to restore the prior leveling state or to always enable
  * leveling immediately after G28.
  */
+<<<<<<< HEAD
 //#define RESTORE_LEVELING_AFTER_G28
 //#define ENABLE_LEVELING_AFTER_G28
 
@@ -1402,6 +1407,9 @@
   #define LEVELING_NOZZLE_TEMP 120   // (°C) Only applies to E0 at this time
   #define LEVELING_BED_TEMP     50
 #endif
+=======
+#define RESTORE_LEVELING_AFTER_G28
+>>>>>>> 1bed0032e9 (Mesh Bed leveling)
 
 /**
  * Enable detailed logging of G28, G29, M48, etc.
@@ -1433,7 +1441,7 @@
   /**
    * Enable the G26 Mesh Validation Pattern tool.
    */
-  //#define G26_MESH_VALIDATION
+  #define G26_MESH_VALIDATION
   #if ENABLED(G26_MESH_VALIDATION)
     #define MESH_TEST_NOZZLE_SIZE    0.4  // (mm) Diameter of primary nozzle.
 <<<<<<< HEAD
@@ -1447,8 +1455,12 @@
     #define MESH_TEST_HOTEND_TEMP    195  // (°C) Default nozzle temperature for the G26 Mesh Validation Tool.
     #define MESH_TEST_BED_TEMP        40  // (°C) Default bed temperature for the G26 Mesh Validation Tool.
     #define G26_XY_FEEDRATE           20  // (mm/s) Feedrate for XY Moves for the G26 Mesh Validation Tool.
+<<<<<<< HEAD
 >>>>>>> c66670c377 (Linear advance and moved to 195°C)
     #define G26_RETRACT_MULTIPLIER   1.0  // G26 Q (retraction) used by default between mesh test elements.
+=======
+    #define G26_RETRACT_MULTIPLIER   4.5  // G26 Q (retraction) used by default between mesh test elements.
+>>>>>>> 1bed0032e9 (Mesh Bed leveling)
   #endif
 
 #endif
@@ -1508,8 +1520,8 @@
   //=================================== Mesh ==================================
   //===========================================================================
 
-  #define MESH_INSET 10          // Set Mesh bounds as an inset region of the bed
-  #define GRID_MAX_POINTS_X 3    // Don't use more than 7 points per axis, implementation limited.
+  #define MESH_INSET 20          // Set Mesh bounds as an inset region of the bed
+  #define GRID_MAX_POINTS_X 4    // Don't use more than 7 points per axis, implementation limited.
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   //#define MESH_G28_REST_ORIGIN // After homing all axes ('G28' or 'G28 XYZ') rest Z at Z_MIN_POS
@@ -1520,7 +1532,7 @@
  * Add a bed leveling sub-menu for ABL or MBL.
  * Include a guided procedure if manual probing is enabled.
  */
-//#define LCD_BED_LEVELING
+#define LCD_BED_LEVELING
 
 #if ENABLED(LCD_BED_LEVELING)
   #define MESH_EDIT_Z_STEP  0.025 // (mm) Step size while manually probing Z axis.
@@ -1708,7 +1720,11 @@
 // Preheat Constants - Up to 5 are supported without changes
 //
 #define PREHEAT_1_LABEL       "PLA"
+<<<<<<< HEAD
 #define PREHEAT_1_TEMP_HOTEND 200
+=======
+#define PREHEAT_1_TEMP_HOTEND 195
+>>>>>>> 1bed0032e9 (Mesh Bed leveling)
 #define PREHEAT_1_TEMP_BED     40
 #define PREHEAT_1_TEMP_CHAMBER 35
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
