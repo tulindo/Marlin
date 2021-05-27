@@ -937,9 +937,13 @@
  */
 #define PROBE_MANUALLY
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #define MANUAL_PROBE_START_Z 0.2
 >>>>>>> 8391de0172 (Mesh bed leveling fixes)
+=======
+#define MANUAL_PROBE_START_Z 0.2
+>>>>>>> 453db44fc61e50912d2d77ab90c00694f011be63
 
 /**
  * A Fix-Mounted Probe either doesn't deploy or needs manual deployment.
@@ -1152,7 +1156,10 @@
 //#define PROBING_HEATERS_OFF       // Turn heaters off when probing
 #if ENABLED(PROBING_HEATERS_OFF)
   #define WAIT_FOR_BED_HEATER     // Wait for bed to heat back up between probes (to improve accuracy)
+<<<<<<< HEAD
   #define WAIT_FOR_HOTEND         // Wait for hotend to heat back up between probes (to improve accuracy & prevent cold extrude)
+=======
+>>>>>>> 453db44fc61e50912d2d77ab90c00694f011be63
 #endif
 //#define PROBING_FANS_OFF          // Turn fans off when probing
 //#define PROBING_STEPPERS_OFF      // Turn steppers off (unless needed to hold position) when probing
@@ -1234,7 +1241,10 @@
 // The size of the printable area
 =======
 // The size of the print bed
+<<<<<<< HEAD
 >>>>>>> 1bed0032e9 (Mesh Bed leveling)
+=======
+>>>>>>> 453db44fc61e50912d2d77ab90c00694f011be63
 #define X_BED_SIZE 220
 #define Y_BED_SIZE 220
 
@@ -1400,6 +1410,7 @@
  * leveling immediately after G28.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 //#define RESTORE_LEVELING_AFTER_G28
 //#define ENABLE_LEVELING_AFTER_G28
 
@@ -1414,6 +1425,9 @@
 =======
 #define RESTORE_LEVELING_AFTER_G28
 >>>>>>> 1bed0032e9 (Mesh Bed leveling)
+=======
+#define RESTORE_LEVELING_AFTER_G28
+>>>>>>> 453db44fc61e50912d2d77ab90c00694f011be63
 
 /**
  * Enable detailed logging of G28, G29, M48, etc.
@@ -1460,11 +1474,15 @@
     #define MESH_TEST_BED_TEMP        40  // (°C) Default bed temperature for the G26 Mesh Validation Tool.
     #define G26_XY_FEEDRATE           20  // (mm/s) Feedrate for XY Moves for the G26 Mesh Validation Tool.
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c66670c377 (Linear advance and moved to 195°C)
     #define G26_RETRACT_MULTIPLIER   1.0  // G26 Q (retraction) used by default between mesh test elements.
 =======
     #define G26_RETRACT_MULTIPLIER   4.5  // G26 Q (retraction) used by default between mesh test elements.
 >>>>>>> 1bed0032e9 (Mesh Bed leveling)
+=======
+    #define G26_RETRACT_MULTIPLIER   4.5  // G26 Q (retraction) used by default between mesh test elements.
+>>>>>>> 453db44fc61e50912d2d77ab90c00694f011be63
   #endif
 
 #endif
@@ -1551,6 +1569,7 @@
   #define LEVEL_CORNERS_INSET_LFRB { 30, 30, 30, 30 } // (mm) Left, Front, Right, Back insets
   #define LEVEL_CORNERS_HEIGHT      0.0   // (mm) Z height of nozzle at leveling points
   #define LEVEL_CORNERS_Z_HOP       4.0   // (mm) Z height of nozzle between leveling points
+<<<<<<< HEAD
   #define LEVEL_CENTER_TOO              // Move to the center after the last corner
   //#define LEVEL_CORNERS_USE_PROBE
   #if ENABLED(LEVEL_CORNERS_USE_PROBE)
@@ -1577,6 +1596,9 @@
    *  LF --------- RF   LF --------- RF    LF --------- RF   LF --------- RF
    */
   #define LEVEL_CORNERS_LEVELING_ORDER { LF, RF, RB, LB }
+=======
+  #define LEVEL_CENTER_TOO                // Move to the center after the last corner
+>>>>>>> 453db44fc61e50912d2d77ab90c00694f011be63
 #endif
 
 /**
@@ -1613,7 +1635,12 @@
 #endif
 
 // Homing speeds (mm/min)
+<<<<<<< HEAD
 #define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (4*60) }
+=======
+#define HOMING_FEEDRATE_XY (80*60)
+#define HOMING_FEEDRATE_Z  (20*60)
+>>>>>>> 453db44fc61e50912d2d77ab90c00694f011be63
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
@@ -1725,6 +1752,7 @@
 //
 #define PREHEAT_1_LABEL       "PLA"
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define PREHEAT_1_TEMP_HOTEND 200
 =======
 #define PREHEAT_1_TEMP_HOTEND 195
@@ -1737,6 +1765,15 @@
 #define PREHEAT_2_TEMP_HOTEND 240
 #define PREHEAT_2_TEMP_BED    40
 #define PREHEAT_2_TEMP_CHAMBER 35
+=======
+#define PREHEAT_1_TEMP_HOTEND 195
+#define PREHEAT_1_TEMP_BED     40
+#define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
+
+#define PREHEAT_2_LABEL      "PETG"
+#define PREHEAT_2_TEMP_HOTEND 250
+#define PREHEAT_2_TEMP_BED     70
+>>>>>>> 453db44fc61e50912d2d77ab90c00694f011be63
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
 /**
@@ -1959,6 +1996,19 @@
  * you must uncomment the following option or it won't work.
  */
 #define SDSUPPORT
+<<<<<<< HEAD
+=======
+
+/**
+ * SD CARD: SPI SPEED
+ *
+ * Enable one of the following items for a slower SPI transfer speed.
+ * This may be required to resolve "volume init" errors.
+ */
+//#define SPI_SPEED SPI_HALF_SPEED
+//#define SPI_SPEED SPI_QUARTER_SPEED
+//#define SPI_SPEED SPI_EIGHTH_SPEED
+>>>>>>> 453db44fc61e50912d2d77ab90c00694f011be63
 
 /**
  * SD CARD: ENABLE CRC
@@ -2060,6 +2110,7 @@
 // Note: Usually sold with a white PCB.
 //
 #define REPRAP_DISCOUNT_SMART_CONTROLLER
+<<<<<<< HEAD
 
 //
 // GT2560 (YHCB2004) LCD Display
@@ -2068,6 +2119,8 @@
 // Andriy Golovnya's LiquidCrystal_AIP31068 library.
 //
 //#define YHCB2004
+=======
+>>>>>>> 453db44fc61e50912d2d77ab90c00694f011be63
 
 //
 // Original RADDS LCD Display+Encoder+SDCardReader
